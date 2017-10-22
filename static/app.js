@@ -28,4 +28,11 @@ var Function = {
 	}
 }
 
-document.addEventListener('deviceready', Events.onDeviceReady, false);
+document.addEventListener("deviceready", function() {
+		if (shake) {
+			alert('OK');
+		} else {
+			alert('Shake not ok');
+		}
+		shake.startWatch(Events.onShake, 30);
+	}, false);
