@@ -1,4 +1,4 @@
-
+alert('loaded');
 var Global = {
 	inc: 0
 }
@@ -16,7 +16,7 @@ var Events = {
 		Audio.play();
 		Global.inc++;
 
-		document.getElementById('shake').textContent = Global.inc;
+		document.getElementById('shake').innerHTML = Global.inc;
 	}
 }
 var Function = {
