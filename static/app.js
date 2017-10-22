@@ -1,4 +1,4 @@
-var Audio = new Media('file://' + Function.getPath() + "media/ka-ching.mp3");
+var Audio = new Media("media/ka-ching.mp3");
 var index = 0;
 
 if (cordova) {
