@@ -1,6 +1,22 @@
 alert('loaded');
 if (cordova) {
 	alert('cordova OK');
+
+	document.addEventListener("deviceready", function() {
+		if (shake) {
+			alert('OK');
+		} else {
+			alert('Shake not ok');
+		}
+		shake.startWatch(Events.onShake, 30);
+	}, false);
+
+	if (shake) {
+			alert('OK');
+		} else {
+			alert('Shake not ok');
+		}
+		shake.startWatch(Events.onShake, 30);
 } else {
 	alert('cordova ERR');
 }
@@ -33,11 +49,4 @@ var Function = {
 	}
 }
 
-document.addEventListener("deviceready", function() {
-		if (shake) {
-			alert('OK');
-		} else {
-			alert('Shake not ok');
-		}
-		shake.startWatch(Events.onShake, 30);
-	}, false);
+
