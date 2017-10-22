@@ -5,6 +5,11 @@ var Global = {
 var Audio = new Media('file://' + Function.getPath() + "media/ka-ching.mp3");
 var Events = {
 	onDeviceReady: function() {
+		if (shake) {
+			alert('OK');
+		} else {
+			alert('Shake not ok');
+		}
 		shake.startWatch(Events.onShake, 30);
 	},
 	onShake: function() {
